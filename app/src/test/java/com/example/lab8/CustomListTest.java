@@ -74,17 +74,17 @@ public class CustomListTest {
     public void testCountCities(){
         list = MockCityList();
 
-        //Assuming mockCityList has one city
-        assertEquals(1, list.CountCities());
+        //Assuming mockCityList has no city
+        assertEquals(0, list.CountCities());
 
         //Add a new city and verify the count increases
         City newCity = new City("Halifax", "Nova Scotia");
         list.addCity(newCity);
-        assertEquals(2, list.CountCities());
+        assertEquals(1, list.CountCities());
 
         //Delete a city and check if the count decreases
         list.DeleteCity(newCity);
-        assertEquals(1, list.CountCities());
+        assertEquals(0, list.CountCities());
     }
 
 }
