@@ -56,4 +56,8 @@ public class CustomList extends ArrayAdapter<City> {
     public boolean HasCity(City city){
         return cities.contains(city);
     }
+
+    public void DeleteCity(City city){
+
+    }
 }
