@@ -68,4 +68,8 @@ public class CustomList extends ArrayAdapter<City> {
             throw new IllegalArgumentException("Can't delete city that's not in list");
         }
     }
+
+    public int CountCities(){
+        return 1;
+    }
 }
