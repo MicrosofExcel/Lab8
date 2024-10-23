@@ -50,6 +50,9 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void addCity(City city){
+        if (cities.contains(city)) {
+            throw new IllegalArgumentException("City is already in list");
+        }
         cities.add(city);
     }
 
@@ -58,6 +61,11 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void DeleteCity(City city){
-
+        if (cities.contains(city)){
+            cities.remove(city);
+        }
+        else{
+            throw new IllegalArgumentException("Can't delete city that's not in list");
+        }
     }
 }

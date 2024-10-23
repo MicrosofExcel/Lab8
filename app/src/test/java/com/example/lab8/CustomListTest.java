@@ -58,6 +58,7 @@ public class CustomListTest {
 
         //Test deleting an existing city
         City city = new City("Calgary", "Alberta");
+        list.addCity(city);
         assertTrue(list.HasCity(city));
         list.DeleteCity(city);
         assertFalse(list.HasCity(city));
